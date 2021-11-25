@@ -8,7 +8,7 @@ var questions = [
 var onComplete = function () {
   var h1 = document.createElement("h1");
   h1.appendChild(
-    document.createTextNode("Thanks " + questions[0].answer + "for watching")
+    document.createTextNode("Thanks " + questions[0].answer + " /n do visit swarajpurohit.me")
   );
   console.log(questions[0].answer);
   setTimeout(function () {
