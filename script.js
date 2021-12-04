@@ -1,14 +1,15 @@
 var questions = [
-  { question: "What's your first name?" },
-  { question: "What's your last name?" },
-  { question: "What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
-  { question: "Create your password", type: "password" },
+  { question: "What's your first name?", pattern: /^[^\s@]{3,}$/ },
+  { question: "What's your last name?", pattern: /^[^\s@]{3,}$/},
+  {question:  "What's your Phone Number", pattern: /^\d{10}$/},
+  { question: "What's your email?", pattern: /^[^\s@]{3,}@[^\s@]{3,}\.[^\s@]{3,}$/ },
+  { question: "Create your password", type: "password" , pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/},
 ];
 
 var onComplete = function () {
   var h1 = document.createElement("h1");
   h1.appendChild(
-    document.createTextNode("Thanks " + questions[0].answer + " /n do visit swarajpurohit.me")
+    document.createTextNode("Thanks " + questions[0].answer + "  do visit swarajpurohit.me")
   );
   console.log(questions[0].answer);
   setTimeout(function () {
